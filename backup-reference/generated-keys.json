@@ -1,0 +1,11 @@
+{
+  "owner1": {
+    "privateKey": "0xa99f84c770970bc2217ddaaf5de5ab2d9e10bda26c6e116ce2089ebb95a1e72e",
+    "hexWithout0x": "a99f84c770970bc2217ddaaf5de5ab2d9e10bda26c6e116ce2089ebb95a1e72e"
+  },
+  "owner2": {
+    "privateKey": "0x4658145381ea41cf850608ef7760bec62b19e61f5b7b07c34c94ced5333cbdad",
+    "hexWithout0x": "4658145381ea41cf850608ef7760bec62b19e61f5b7b07c34c94ced5333cbdad"
+  },
+  "timestamp": "2025-08-10T00:46:08.267Z"
+}

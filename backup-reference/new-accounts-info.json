@@ -1,0 +1,24 @@
+{
+  "network": "base-sepolia",
+  "owners": {
+    "owner1": {
+      "address": "0x43451967B63410E569D0ea94d83AaE137d6Bca59"
+    },
+    "owner2": {
+      "address": "0xcbea75EF639963f02170A81f86469cc4710f13d3"
+    }
+  },
+  "smartAccounts": {
+    "owner1": {
+      "name": "smart-account-1",
+      "address": "0x382d233262Fc9737188B6F6b2a25a24e05319F5E",
+      "owner": "0x43451967B63410E569D0ea94d83AaE137d6Bca59"
+    },
+    "owner2": {
+      "name": "smart-account-2",
+      "address": "0x55f7415B24eA71537d8E4b9Cb09Dc8244D36f231",
+      "owner": "0xcbea75EF639963f02170A81f86469cc4710f13d3"
+    }
+  },
+  "timestamp": "2025-08-10T01:29:34.009Z"
+}

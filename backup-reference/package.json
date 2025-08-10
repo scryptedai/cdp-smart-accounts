@@ -1,0 +1,22 @@
+{
+  "name": "cdp-smart-wallet",
+  "version": "1.0.0",
+  "description": "CDP Smart Wallet setup and swap demo on Base",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "balance": "node check-balance.mjs",
+    "faucet": "node request-faucet.mjs",
+    "transfer": "node test-transfer.mjs",
+    "swap-demo": "node demo-swap-mainnet.mjs",
+    "swap": "node swap-mainnet.mjs"
+  },
+  "keywords": ["coinbase", "cdp", "smart-wallet", "base", "swap", "defi"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coinbase/cdp-sdk": "^1.34.0",
+    "dotenv": "^17.2.1"
+  }
+}
