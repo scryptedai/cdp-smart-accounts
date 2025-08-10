@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.mjs",
+    "fetch-leaderboard": "node fetch_leaderboard_data.mjs",
     "smart-cron": "node index.mjs",
     "balance-all": "node utils/print-balances.mjs",
     "balance-compare": "node utils/balance-comparison.mjs",
@@ -19,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pg": "^8.11.3",
     "@coinbase/cdp-sdk": "^1.34.0",
     "dotenv": "^17.2.1"
   }
