@@ -1,22 +1,21 @@
 import { CdpClient, parseUnits } from '@coinbase/cdp-sdk';
 import { privateKeyToAccount } from 'viem/accounts';
-import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from '../../config.mjs';
+import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from './config.mjs';
 
-async function smartRecurringTransfers() {
-  console.log('💸 Smart Recurring Transfer: Owner 2 → Owner 3 & 4 (0.00001 ETH each)\n');
+async function recurringTransfers() {
+  console.log('💸 Recurring Transfer: Owner 2 → Owner 3 & 4 (0.00001 ETH each)\n');
 
   const cdp = new CdpClient(CDP_CONFIG);
 
   // Get accounts
   const owner2Account = privateKeyToAccount('0x' + OWNERS.owner2.privateKey);
 
-  // Use the existing smart account for Owner 2 instead of creating a new one
   const smartAccount2 = await cdp.evm.getOrCreateSmartAccount({
-    name: SMART_ACCOUNTS.owner2.name, // Use the existing name
+    name: `cron-${SMART_ACCOUNTS.owner2.name}-transfer`,
     owner: owner2Account,
   });
 
-  // Use known addresses for Owner 3 and 4
+  // Use known addresses instead of creating new smart accounts
   const smartAccount3Address = SMART_ACCOUNTS.owner3.address;
   const smartAccount4Address = SMART_ACCOUNTS.owner4.address;
 
@@ -152,7 +151,7 @@ function formatEthAmount(amountWei) {
   return (Number(amount) / 1e18).toFixed(6);
 }
 
-smartRecurringTransfers().catch((err) => {
-  console.error('❌ Smart recurring transfers failed:', err);
+recurringTransfers().catch((err) => {
+  console.error('❌ Recurring transfers failed:', err);
   process.exit(1);
 });

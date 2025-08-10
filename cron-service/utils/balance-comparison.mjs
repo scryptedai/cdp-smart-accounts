@@ -1,6 +1,6 @@
 import { CdpClient } from '@coinbase/cdp-sdk';
 import { privateKeyToAccount } from 'viem/accounts';
-import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from '../../config.mjs';
+import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from './config.mjs';
 import fs from 'fs';
 
 async function balanceComparison() {
@@ -53,8 +53,8 @@ async function balanceComparison() {
   // Load previous balances if they exist
   let previousBalances = [];
   try {
-    if (fs.existsSync('last-balances.json')) {
-      previousBalances = JSON.parse(fs.readFileSync('last-balances.json', 'utf8'));
+    if (fs.existsSync('db/last-balances.json')) {
+      previousBalances = JSON.parse(fs.readFileSync('db/last-balances.json', 'utf8'));
     }
   } catch (error) {
     // No previous balances, first run
@@ -131,7 +131,7 @@ async function balanceComparison() {
   }
   
   // Save current balances for next comparison
-  fs.writeFileSync('last-balances.json', JSON.stringify(currentBalances, null, 2));
+  fs.writeFileSync('db/last-balances.json', JSON.stringify(currentBalances, null, 2));
   
   const currentTime = new Date().toLocaleTimeString();
   console.log(`\n⏰ Last updated: ${currentTime}\n`);

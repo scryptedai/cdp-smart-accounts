@@ -75,8 +75,8 @@ async function createFourSmartAccounts() {
     note: "Fresh accounts generated for 4 Smart Accounts"
   };
   
-  fs.writeFileSync('four-owners-keys.json', JSON.stringify(keysData, null, 2));
-  console.log('📁 Saved: four-owners-keys.json');
+  fs.writeFileSync('db/four-owners-keys.json', JSON.stringify(keysData, null, 2));
+  console.log('📁 Saved: db/four-owners-keys.json');
 
   // Save addresses and Smart Account info
   const accountsData = {
@@ -100,8 +100,8 @@ async function createFourSmartAccounts() {
     };
   }
 
-  fs.writeFileSync('four-accounts-info.json', JSON.stringify(accountsData, null, 2));
-  console.log('📁 Saved: four-accounts-info.json');
+  fs.writeFileSync('db/four-accounts-info.json', JSON.stringify(accountsData, null, 2));
+  console.log('📁 Saved: db/four-accounts-info.json');
 
   // Update config.mjs with new owners
   const newConfigContent = `// CDP Configuration

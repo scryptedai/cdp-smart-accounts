@@ -1,6 +1,6 @@
 import { CdpClient } from '@coinbase/cdp-sdk';
 import { privateKeyToAccount } from 'viem/accounts';
-import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from '../../config.mjs';
+import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from './config.mjs';
 
 async function printBalances() {
   const cdp = new CdpClient(CDP_CONFIG);

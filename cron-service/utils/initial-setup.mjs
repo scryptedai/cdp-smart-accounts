@@ -1,6 +1,6 @@
 import { CdpClient, parseUnits } from '@coinbase/cdp-sdk';
 import { privateKeyToAccount } from 'viem/accounts';
-import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from '../../config.mjs';
+import { CDP_CONFIG, OWNERS, SMART_ACCOUNTS, NETWORKS } from './config.mjs';
 
 async function initialSetup() {
   console.log('🔧 Initial Setup: Owner 1 faucet + Owner 2 gets 0.0001 ETH from Owner 1\n');
