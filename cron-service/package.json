@@ -6,7 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "node index.mjs",
+    "cron": "node cron-index.mjs",
+    "smart-cron": "node smart-cron-index.mjs",
     "balance": "node check-balance.mjs",
+    "balance-all": "node tasks/balances/print-balances.mjs",
+    "balance-compare": "node tasks/balances/balance-comparison.mjs",
+    "setup": "node tasks/setup/initial-setup.mjs",
+    "transfer-recurring": "node tasks/transfers/recurring-transfers.mjs",
     "faucet": "node request-faucet.mjs",
     "transfer": "node test-transfer.mjs",
     "swap-demo": "node demo-swap-mainnet.mjs",
